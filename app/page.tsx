@@ -1,6 +1,6 @@
-import { main } from "framer-motion/client";
-import Image from "next/image";
-import { Metadata } from "next";
+// import { main } from "framer-motion/client";
+// import Image from "next/image";
+// import { Metadata } from "next";
 
 
 // export const metadata: Metadata = {
