@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`{jetBrainsMono.variable} bg-[#000000] text-white `}>
+      <body className={`${jetBrainsMono.variable} bg-[#000000] text-white `}>
         <Header />
           {children}
         

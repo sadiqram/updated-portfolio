@@ -1,8 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@layer base {
+
+/* @layer base {
   body {
     @apply font-jetBrainsMono bg-black-100;
   }
-}
+} */
