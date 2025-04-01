@@ -9,6 +9,10 @@
 // };
 
 export default function Home() {
-  return <div>Homepage</div>
+  return(
+    <main className="flex flex-col items-center justify-center h-screen">
+    <div>Homepage</div>
+    </main>
+  ) 
   
 }
