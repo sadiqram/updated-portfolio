@@ -1,9 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import Header from "./components/layout/Header/Header";
+// import Header from "./components/layout/Header/Header";
+import Header from "@/components/Header";
 
-const inter = Inter({ subsets: ["latin"] });
+const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"] , weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
+  variable: "--font-jetBrainsMono",
+});
 
 export const metadata: Metadata = {
   title: "Sadiq R.",
@@ -17,11 +20,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={jetBrainsMono.variable}>
         <Header />
-        <div className="pt-16">
           {children}
-        </div>
+        
       </body>
     </html>
   );
