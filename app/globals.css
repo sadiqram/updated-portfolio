@@ -1,9 +1,27 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+/* @layer theme, base, components, utilities; */
 
 
-/* @layer base {
+@theme {
+  --font-jetbrains: "JetBrains Mono", monospace;
+  --color-primary: #ff004f;
+  --color-bg: #000000;
+}
+
+@layer base {
   body {
-    @apply font-jetBrainsMono bg-black-100;
+    font-family: var(--font-jetbrains);
+    background-color: var(--color-bg);
+    color: white;
   }
-} */
+  .h1 {
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+  }
+  .h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+  .h3 {
+    @apply text-[24px] xl:text-[32px] leading-[1.1] font-semibold;
+  }
+}

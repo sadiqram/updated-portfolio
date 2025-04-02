@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import { Button } from './ui/button';
 import Nav from './navbar';
+import MobileNav from './ui/MobileNav';
+
+
+
 export default function Header() {
   return (
     <header className='py-8 xl:py-12'>
@@ -15,15 +19,16 @@ export default function Header() {
             {/* only show on desktop screen sizes */}
             <div className="hidden xl:flex items-center gap-8">
             <Nav />
-            <Link href="/contact">
+            {/* <Link href="/contact">
                 <Button>
                     Contact
                 </Button>
-            </Link>
+            </Link> */}
             </div>
 
             {/* only show on mobile screen sizes */}
             <div className="xl:hidden">
+                <MobileNav />
                 
             </div>
             
