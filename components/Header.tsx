@@ -1,8 +1,8 @@
-
+'use client'
 import Link from 'next/link';
 import Nav from './navbar';
 import MobileNav from './ui/MobileNav';
-
+import MobileDock from './MobileDock';
 
 
 export default function Header() {
@@ -24,6 +24,7 @@ export default function Header() {
         {/* Mobile nav */}
         <div className="xl:hidden">
           <MobileNav />
+          <MobileDock />
         </div>
       </div>
     </header>
