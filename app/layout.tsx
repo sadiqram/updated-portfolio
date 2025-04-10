@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-// import Header from "./components/layout/Header/Header";
+import HeaderWrapper from "@/components/HeaderWrapper";
 import Header from "@/components/Header";
 
 const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"] , weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -22,7 +22,7 @@ export default function RootLayout({
     
     <html lang="en" className="min-h-screen">
       <body className={`${jetBrainsMono.variable} min-h-screen bg-[inherit] text-[inherit] transition-colors duration-300`}>
-      <Header />
+      <HeaderWrapper />
           {children} 
       </body>
     </html>
