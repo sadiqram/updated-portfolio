@@ -13,7 +13,7 @@ export default function Home() {
         <div className="text-center xl:text-left order-2 xl:order-none">
         <span className="text-xl">Software Engineer</span>
         <h1 className="h1 mb-6"> Hi,I&apos;m <br /><span className="text-[#ff004f]">Sadiq</span>  </h1>
-        <p className="max-w-[500px] mb-9 text-white/80">
+        <p className="max-w-[500px] mb-9 text-[var(--color-text-muted)] transition-colors duration-300">
           I&apos;m a software engineer with a passion for building scalable and efficient systems. I&apos;m currently NOT working as a software engineer at <span className="text-color-primary">Google</span> and <span className="text-color-primary">Facebook</span>.
         </p>
         {/* social media icons */}
