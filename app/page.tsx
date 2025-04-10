@@ -2,16 +2,17 @@ import { Button } from "@/components/ui/button"
 import { FiDownload } from "react-icons/fi"
 import Social from "@/components/Social"
 import Photo from "@/components/Photo"
+import ProjectBentoGrid from "@/components/BentoGrid"
 
 
 export default function Home() {
   return(
     <section className="h-full">
     <div className="container mx-auto">
-      <div className="flex flex-col items-center justify-center xl:flex-row x:pt-8 xl:pb-24 ">
+      <div className="flex flex-col items-center justify-center xl:flex-row xl:pt-8 xl:pb-24 ">
         <div className="text-center xl:text-left order-2 xl:order-none">
         <span className="text-xl">Software Engineer</span>
-        <h1 className="h1 mb-6"> Hi, I&apos;m <br /> <span className="text-[#ff004f]">Sadiq</span> <span>Ramanu</span> </h1>
+        <h1 className="h1 mb-6"> Hi,I&apos;m <br /> <span className="text-[#ff004f]">Sadiq</span> <span> Ramanu </span> </h1>
         <p className="max-w-[500px] mb-9 text-white/80">
           I&apos;m a software engineer with a passion for building scalable and efficient systems. I&apos;m currently NOT working as a software engineer at <span className="text-color-primary">Google</span> and <span className="text-color-primary">Facebook</span>.
         </p>
@@ -31,10 +32,62 @@ export default function Home() {
           <Photo />
         </div>
       </div>
-    
       
     </div>
+
+{/* about me section */}
+    <div className="container mx-auto"> 
+      <div className="flex flex-col items-center justify-center xl:flex-row xl:pt-8 xl:pb-24 ">
+        <div className="text-center xl:text-left order-2 xl:order-none">
+          <h2 className="h2 mb-6">About Me</h2>
+        </div>
+      </div>
+    </div>  
+
+
+    {/* skills section */}
+    <div className="container mx-auto"> 
+      <div className="flex flex-col items-center justify-center xl:flex-row xl:pt-8 xl:pb-24 ">
+        <div className="text-center xl:text-left order-2 xl:order-none">
+          <h2 className="h2 mb-6">Skills</h2>
+        </div>
+      </div>
+    </div>
+
+    {/* Experience and Qualifications section */}
+    <div className="container mx-auto"> 
+      <div className="flex flex-col items-center justify-center xl:flex-row xl:pt-8 xl:pb-24 ">
+        <div className="text-center xl:text-left order-2 xl:order-none">
+          <h2 className="h2 mb-6">Experience and Qualifications</h2>
+        </div>
+      </div>
+    </div>
+
+    {/* projects section */}
+    <div className="container mx-auto"> 
+      <div className="flex flex-col items-center justify-center xl:flex-row xl:pt-8 xl:pb-24 ">
+        <div className="text-center xl:text-left order-2 xl:order-none">
+          <h2 className="h2 mb-6">Projects</h2>
+          
+        </div>
+      </div>
+    </div>
+
+    {/* contact section */}
+    <div className="container mx-auto"> 
+      <div className="flex flex-col items-center justify-center xl:flex-row xl:pt-8 xl:pb-24 ">
+        <div className="text-center xl:text-left order-2 xl:order-none">
+          <h2 className="h2 mb-6">Contact</h2>
+        </div>
+      </div>
+    </div>
     </section>
+
+   
+
+
+
+
   ) 
   
 }
