@@ -29,7 +29,7 @@ export default function ThemeToggle() {
       className="text-xl p-2 rounded-full transition  hover:text-white"
       aria-label="Toggle Theme"
     >
-      {isDark ? <BsSun className="text-gray-300 transition-all duration-300 transform hover:scale-110 hover:brightness-90" /> : <BsMoon className="text-black" />}
+      {isDark ? <BsSun className="text-gray-300 transition-all duration-300 transform hover:scale-110 " /> : <BsMoon className="text-black transition-all duration-300 transform hover:scale-110" />}
     </button>
   );
 }
