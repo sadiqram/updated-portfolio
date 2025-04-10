@@ -1,32 +1,44 @@
+"use client";
 
-'use client'
-
-import { Sheet, SheetContent, SheetTrigger , SheetTitle, SheetHeader} from '@/components/ui/sheet'
-import Link from 'next/link'
-import {usePathname} from 'next/navigation'
-import {CiMenuFries} from 'react-icons/ci'
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+  SheetTitle,
+  SheetHeader,
+} from "@/components/ui/sheet";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { CiMenuFries } from "react-icons/ci";
+import { useEffect, useState } from 'react';
 
 const links = [
-    {
-        name: 'Home',
-        href: '/'
-    },
-    {
-        name: 'About',
-        href: '/about'
-    },
-    {
-        name: 'Projects',
-        href: '/projects'
-    },
-    {
-        name: 'Contact',
-        href: '/contact'
-    }
-]
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "About",
+    href: "/about",
+  },
+  {
+    name: "Projects",
+    href: "/projects",
+  },
+  {
+    name: "Contact",
+    href: "/contact",
+  },
+];
 
 export default function MobileNav() {
     const pathname = usePathname();
+    const [sheetBg, setSheetBg] = useState('rgba(0, 0, 0, 0.5)');
+  
+    useEffect(() => {
+      const isLight = document.documentElement.classList.contains('light');
+      setSheetBg(isLight ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.5)');
+    }, []);
   
     return (
       <Sheet>
@@ -34,8 +46,10 @@ export default function MobileNav() {
           <CiMenuFries className="text-[32px] text-[var(--color-text)] hover:text-[var(--color-primary)] transition-all duration-300" />
         </SheetTrigger>
   
-        <SheetContent className="flex flex-col bg-[var(--color-bg)] text-[var(--color-text)] transition-colors duration-300">
-          {/* Required by Radix for accessibility */}
+        <SheetContent
+          className="flex flex-col text-[var(--color-text)] transition-colors duration-300 backdrop-blur-md"
+          style={{ backgroundColor: sheetBg }}
+        >
           <SheetHeader>
             <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
           </SheetHeader>
@@ -49,7 +63,7 @@ export default function MobileNav() {
             </Link>
           </div>
   
-          {/* Nav Links */}
+          {/* Nav */}
           <nav className="flex flex-col justify-center items-center gap-8">
             {links.map((link, index) => {
               const isActive = pathname === link.href;
