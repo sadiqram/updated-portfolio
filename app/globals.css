@@ -4,12 +4,87 @@
 
 
 @theme {
+
+  /* Container config */
+  --container-padding: 15px;
+
+  /* Font config */
   --font-jetbrains: "JetBrains Mono", monospace;
+
+  /* Color config */
   --color-primary: #ff004f;
-  --color-bg: #000000;
+
+  --color-bg-dark: #000000;
+  --color-bg-light: #ffffff;
+
+  --color-text-dark: #ffffff;
+  --color-text-light: #000000;
+
+  --color-accent: #1f1f1f;
+  --color-accent-hover: #333333;
+  --color-nav-muted-dark: #9ca3af; /* text-gray-400 */
+--color-nav-muted-light: #4b5563; /* text-gray-600 */
+
+
+
+
+  /* Breakpoint config */
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 960px;
+  --breakpoint-xl: 1200px;
+  
+
 }
 
 @layer base {
+  html {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-dark);
+    color-scheme: dark;
+    --color-text: var(--color-text-dark);
+    --color-nav-muted: var(--color-nav-muted-dark);
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  html.light {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-light);
+    color-scheme: light;
+    --color-text: var(--color-text-light);
+    --color-nav-muted: var(--color-nav-muted-light);
+    transition: background-color 0.4s ease, color 0.4s ease;
+  }
+
+  body {
+    font-family: var(--font-jetbrains);
+    background-color: inherit;
+    color: inherit;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  .h1 {
+    @apply text-[48px] xl:text-[80px] leading-[1.1] font-semibold;
+  }
+
+  .h2 {
+    @apply text-[36px] xl:text-[48px] leading-[1.1] font-semibold;
+  }
+
+  .h3 {
+    @apply text-[24px] xl:text-[32px] leading-[1.1] font-semibold;
+  }
+}
+
+
+/*
+@layer base {
+  /* html{
+    color-scheme: dark;
+  }
+  html.light{
+    color-scheme: light;
+  } 
   body {
     font-family: var(--font-jetbrains);
     background-color: var(--color-bg);
@@ -25,3 +100,5 @@
     @apply text-[24px] xl:text-[32px] leading-[1.1] font-semibold;
   }
 }
+
+*/
