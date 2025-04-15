@@ -29,6 +29,10 @@ const links = [
     name: "Contact",
     href: "/contact",
   },
+  {
+    name: "Skills",
+    href: "/skills",
+  },
 ];
 
 export default function MobileNav() {

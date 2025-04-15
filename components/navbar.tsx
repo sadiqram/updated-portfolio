@@ -21,6 +21,10 @@ const links = [
     name: "Contact",
     href: "/contact",
   },
+  {
+    name: "Skills",
+    href: "/skills",
+  },
 ];
 // add fancy underline animation
 
