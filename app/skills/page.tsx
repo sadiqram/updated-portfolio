@@ -1,4 +1,5 @@
-import { RiBracesLine, RiCpuLine, RiStackLine } from "react-icons/ri";
+import { RiBracesLine, RiCpuLine, } from "react-icons/ri";
+import { FaSitemap } from 'react-icons/fa';
 
 export default function Skills() {
   const languages = [
@@ -43,7 +44,7 @@ export default function Skills() {
         {/* Skills Container */}
         <div className="grid gap-8 md:gap-12">
           {/* Languages Section */}
-          <div className="bg-card rounded-2xl p-6 shadow-lg border border-border/50 hover:border-primary/50 transition-all duration-300">
+          <div className="bg-card rounded-2xl p-6 shadow-lg transition-all duration-300">
             <h3 className="text-xl font-bold mb-6 flex items-center justify-center text-primary">
               <RiBracesLine className="mr-2" />
               Languages
@@ -52,7 +53,7 @@ export default function Skills() {
               {languages.map((skill) => (
                 <div
                   key={skill.name}
-                  className="group relative bg-muted/50 rounded-xl p-4 flex flex-col items-center justify-center transition-all duration-300 hover:bg-primary/10 hover:scale-105"
+                  className="group relative bg-muted/50 rounded-xl p-4 flex flex-col items-center justify-center transition-all duration-300 hover:bg-muted hover:scale-105"
                 >
                   <div className="w-12 h-12 flex items-center justify-center mb-2">
                     <img
@@ -68,7 +69,7 @@ export default function Skills() {
           </div>
 
           {/* Technologies Section */}
-          <div className="bg-card rounded-2xl p-6 shadow-lg border border-border/50 hover:border-primary/50 transition-all duration-300">
+          <div className="bg-card rounded-2xl p-6 shadow-lg transition-all duration-300">
             <h3 className="text-xl font-bold mb-6 flex items-center justify-center text-primary">
               <RiCpuLine className="mr-2" />
               Technologies
@@ -77,7 +78,7 @@ export default function Skills() {
               {technologies.map((skill) => (
                 <div
                   key={skill.name}
-                  className="group relative bg-muted/50 rounded-xl p-4 flex flex-col items-center justify-center transition-all duration-300 hover:bg-primary/10 hover:scale-105"
+                  className="group relative bg-muted/50 rounded-xl p-4 flex flex-col items-center justify-center transition-all duration-300 hover:bg-muted hover:scale-105"
                 >
                   <div className="w-12 h-12 flex items-center justify-center mb-2">
                     <img
@@ -93,22 +94,25 @@ export default function Skills() {
           </div>
 
           {/* Frameworks Section */}
-          <div className="bg-card rounded-2xl p-6 shadow-lg border border-border/50 hover:border-primary/50 transition-all duration-300">
+          <div className="bg-card rounded-2xl p-6 shadow-lg transition-all duration-300">
             <h3 className="text-xl font-bold mb-6 flex items-center justify-center text-primary">
-              <RiStackLine className="mr-2" />
+            
+              <FaSitemap className="mr-2" />
               Frameworks
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-3 gap-4">
               {frameworks.map((skill) => (
                 <div
                   key={skill.name}
-                  className="group relative bg-muted/50 rounded-xl p-4 flex flex-col items-center justify-center transition-all duration-300 hover:bg-primary/10 hover:scale-105"
+                  className="group relative bg-muted/50 rounded-xl p-4 flex flex-col items-center justify-center transition-all duration-300 hover:bg-muted hover:scale-105"
                 >
                   <div className="w-12 h-12 flex items-center justify-center mb-2">
                     <img
                       src={`/img/${skill.iconSvg}`}
                       alt={skill.name}
-                      className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                      className={`w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 ${
+            skill.name === "Next.js" ? "dark:invert" : ""
+          }`}
                     />
                   </div>
                   <span className="text-sm font-medium text-center">{skill.name}</span>
