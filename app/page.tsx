@@ -5,7 +5,7 @@ import Photo from "@/components/Photo"
 import Skills from "@/app/skills/page"
 import Projects from "@/app/projects/page"
 import Magnetic from "@/app/Magnetic/page"
-
+import Contact from "@/app/contact/page"
 export default function Home() {
   return(
     
@@ -60,6 +60,7 @@ export default function Home() {
     <Projects />
 
     {/* contact section */}
+    <Contact />
   
 
 
