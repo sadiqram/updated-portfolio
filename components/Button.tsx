@@ -37,14 +37,12 @@ return (
     <div className="relative rounded-full overflow-hidden" style={{overflow: "hidden"}} {...attributes}
     onMouseEnter={manageMouseEnter} onMouseLeave={manageMouseLeave}
     >
+    <div className="relative z-10">
     {children}
-    <div ref={circle} className="absolute inset-0 pointer-events-none rounded-full bg-primary" />
+    </div>
+    <div ref={circle} className="absolute inset-0 pointer-events-none rounded-full bg-primary opacity-0" />
     </div>
     </Magnetic>
-
-
-
-
 )
 
 
