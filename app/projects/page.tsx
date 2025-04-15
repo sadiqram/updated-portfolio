@@ -1,5 +1,5 @@
 import { FaGithub } from "react-icons/fa";
-import Magnetic from "@/app/Magnetic/page"
+
 import Button from "@/components/Button"
 
 
