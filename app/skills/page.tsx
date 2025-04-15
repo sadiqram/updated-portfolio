@@ -1,5 +1,7 @@
 import { RiBracesLine, RiCpuLine, } from "react-icons/ri";
 import { FaSitemap } from 'react-icons/fa';
+import Magnetic from "@/app/Magnetic/page"
+
 
 export default function Skills() {
   const languages = [
@@ -55,13 +57,15 @@ export default function Skills() {
                   key={skill.name}
                   className="group relative bg-muted/50 rounded-xl p-4 flex flex-col items-center justify-center transition-all duration-300 hover:bg-muted hover:scale-105"
                 >
-                  <div className="w-12 h-12 flex items-center justify-center mb-2">
-                    <img
-                      src={`/img/${skill.iconSvg}`}
-                      alt={skill.name}
-                      className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
+                  <Magnetic>
+                    <div className="w-12 h-12 flex items-center justify-center mb-2">
+                      <img
+                        src={`/img/${skill.iconSvg}`}
+                        alt={skill.name}
+                        className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                  </Magnetic>
                   <span className="text-sm font-medium text-center">{skill.name}</span>
                 </div>
               ))}
@@ -76,17 +80,22 @@ export default function Skills() {
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-8 gap-4">
               {technologies.map((skill) => (
+                
                 <div
                   key={skill.name}
                   className="group relative bg-muted/50 rounded-xl p-4 flex flex-col items-center justify-center transition-all duration-300 hover:bg-muted hover:scale-105"
                 >
-                  <div className="w-12 h-12 flex items-center justify-center mb-2">
-                    <img
-                      src={`/img/${skill.iconSvg}`}
-                      alt={skill.name}
-                      className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
-                    />
-                  </div>
+                 
+                  <Magnetic>
+                    <div className="w-12 h-12 flex items-center justify-center mb-2">
+                      <img
+                        src={`/img/${skill.iconSvg}`}
+                        alt={skill.name}
+                        className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
+                      />
+                    </div>
+                  </Magnetic>
+                  
                   <span className="text-sm font-medium text-center">{skill.name}</span>
                 </div>
               ))}
@@ -106,15 +115,17 @@ export default function Skills() {
                   key={skill.name}
                   className="group relative bg-muted/50 rounded-xl p-4 flex flex-col items-center justify-center transition-all duration-300 hover:bg-muted hover:scale-105"
                 >
-                  <div className="w-12 h-12 flex items-center justify-center mb-2">
-                    <img
-                      src={`/img/${skill.iconSvg}`}
-                      alt={skill.name}
-                      className={`w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 ${
+                  <Magnetic>
+                    <div className="w-12 h-12 flex items-center justify-center mb-2">
+                      <img
+                        src={`/img/${skill.iconSvg}`}
+                        alt={skill.name}
+                        className={`w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 ${
             skill.name === "Next.js" ? "dark:invert" : ""
           }`}
-                    />
-                  </div>
+                      />
+                    </div>
+                  </Magnetic>
                   <span className="text-sm font-medium text-center">{skill.name}</span>
                 </div>
               ))}

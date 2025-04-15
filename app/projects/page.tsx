@@ -1,4 +1,6 @@
 import { FaGithub } from "react-icons/fa";
+import Magnetic from "@/app/Magnetic/page"
+import Button from "@/components/Button"
 
 
 export default function Projects() {
@@ -57,23 +59,27 @@ export default function Projects() {
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
                 <p className="text-sm mb-4">{project.description}</p>
-                <div className="flex items-center gap-4">
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-block text-primary border border-primary rounded px-4 py-2 text-sm hover:bg-primary hover:text-white transition-colors duration-300"
-                  >
-                    View Project
-                  </a>
-                  <a
-                    href={project.source}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center p-2 border border-primary rounded hover:bg-primary hover:text-white transition-colors duration-300"
-                  >
-                    <FaGithub className="text-xl" />
-                  </a>
+                <div className="flex gap-4">
+                  <Button>
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-block text-primary border border-primary rounded px-4 py-2 text-sm hover:bg-primary hover:text-white transition-colors duration-300"
+                    >
+                      View Project
+                    </a>
+                  </Button>
+                  <Button>
+                    <a
+                      href={project.source}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center p-2 border border-primary rounded hover:bg-primary hover:text-white transition-colors duration-300"
+                    >
+                      <FaGithub className="text-xl" />
+                    </a>
+                  </Button>
                 </div>
               </div>
             </div>

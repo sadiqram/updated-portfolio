@@ -3,7 +3,7 @@
 import ThemeToggle from "./ThemeToggle";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-
+import Magnetic from "@/app/Magnetic/page"
 const links = [
   {
     name: "Home",
@@ -40,9 +40,9 @@ export default function Nav() {
         const isActive = pathname === link.href;
 
         return (
+          <Magnetic key={index}>
           <Link
             href={link.href}
-            key={index}
             className="relative group capitalize font-medium"
           >
             <span
@@ -62,6 +62,7 @@ export default function Nav() {
               }`}
             />
           </Link>
+          </Magnetic>
         );
       })}
 

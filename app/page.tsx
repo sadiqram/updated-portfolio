@@ -4,7 +4,7 @@ import Social from "@/components/Social"
 import Photo from "@/components/Photo"
 import Skills from "@/app/skills/page"
 import Projects from "@/app/projects/page"
-
+import Magnetic from "@/app/Magnetic/page"
 
 export default function Home() {
   return(
