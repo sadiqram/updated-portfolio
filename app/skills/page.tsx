@@ -13,11 +13,11 @@ export default function Skills() {
       
       // Technologies array (tools, platforms, and services)
       const technologies = [
-        { name: "CSS", iconSvg: "css-svgrepo-com.svg" },
+       
         { name: "Docker", iconSvg: "docker-svgrepo-com.svg" },
         { name: "Git", iconSvg: "git-svgrepo-com.svg" },
         { name: "Linux", iconSvg: "linux-svgrepo-com.svg" },
-        { name: "Google Cloud", iconSvg: "google-cloud-svgrepo-com.svg" },
+        { name: "Google Cloud", iconSvg: "gcp-svgrepo-com.svg" },
         { name: "AWS", iconSvg: "aws-svgrepo-com.svg" },
         { name: "Maven", iconSvg: "maven-svgrepo-com.svg" },
         { name: "Nginx", iconSvg: "nginx-svgrepo-com.svg" },
@@ -27,7 +27,7 @@ export default function Skills() {
       // Frameworks array (libraries and frameworks)
       const frameworks = [
         { name: "React", iconSvg: "react-svgrepo-com.svg" },
-        { name: "Next.js", iconSvg: "nextjs-svgrepo-com.svg" },
+        { name: "Next.js", iconSvg: "next-dot-js-svgrepo-com.svg" },
         { name: "Tailwind CSS", iconSvg: "tailwind-svgrepo-com.svg" },
       ];
 
