@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 import { FiDownload } from "react-icons/fi"
 import Social from "@/components/Social"
 import Photo from "@/components/Photo"
-import HeaderWrapper from "@/components/HeaderWrapper"
+
 
 
 
@@ -46,6 +46,10 @@ export default function Home() {
 
 
     {/* skills section */}
+   
+
+    
+    
    
 
     {/* Experience and Qualifications section */}
