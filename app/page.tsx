@@ -2,15 +2,21 @@ import { Button } from "@/components/ui/button"
 import { FiDownload } from "react-icons/fi"
 import Social from "@/components/Social"
 import Photo from "@/components/Photo"
+import HeaderWrapper from "@/components/HeaderWrapper"
 
 
 
 export default function Home() {
   return(
+    
     <section className="h-full">
-    <div className="container mx-auto">
+   
+    <div className="container mx-auto px-4 xl:px-0">
+   
       <div className="flex flex-col items-center justify-center xl:flex-row xl:pt-8 xl:pb-24 ">
+     
         <div className="text-center xl:text-left order-2 xl:order-none">
+        
         <span className="text-xl">Software Engineer</span>
         <h1 className="h1 mb-6"> Hi,I&apos;m <br /><span className="text-[#ff004f]">Sadiq</span>  </h1>
         <p className="max-w-[500px] mb-9 text-[var(--color-text-muted)] transition-colors duration-300">
@@ -35,59 +41,33 @@ export default function Home() {
       
     </div>
 
-{/* about me section */}
-    <div className="container mx-auto"> 
-      <div className="flex flex-col items-center justify-center xl:flex-row xl:pt-8 xl:pb-24 ">
-        <div className="text-center xl:text-left order-2 xl:order-none">
-          <h2 className="h2 mb-6">About Me</h2>
-        </div>
-      </div>
-    </div>  
+    {/* about me section */}
+  
 
 
     {/* skills section */}
-    <div className="container mx-auto"> 
-      <div className="flex flex-col items-center justify-center xl:flex-row xl:pt-8 xl:pb-24 ">
-        <div className="text-center xl:text-left order-2 xl:order-none">
-          <h2 className="h2 mb-6">Skills</h2>
-        </div>
-      </div>
-    </div>
-
-    {/* Experience and Qualifications section */}
-    <div className="container mx-auto"> 
-      <div className="flex flex-col items-center justify-center xl:flex-row xl:pt-8 xl:pb-24 ">
-        <div className="text-center xl:text-left order-2 xl:order-none">
-          <h2 className="h2 mb-6">Experience and Qualifications</h2>
-        </div>
-      </div>
-    </div>
-
-    {/* projects section */}
-    <div className="container mx-auto"> 
-      <div className="flex flex-col items-center justify-center xl:flex-row xl:pt-8 xl:pb-24 ">
-        <div className="text-center xl:text-left order-2 xl:order-none">
-          <h2 className="h2 mb-6">Projects</h2>
-          
-        </div>
-      </div>
-    </div>
-
-    {/* contact section */}
-    <div className="container mx-auto"> 
-      <div className="flex flex-col items-center justify-center xl:flex-row xl:pt-8 xl:pb-24 ">
-        <div className="text-center xl:text-left order-2 xl:order-none">
-          <h2 className="h2 mb-6">Contact</h2>
-        </div>
-      </div>
-    </div>
-    </section>
-
    
 
+    {/* Experience and Qualifications section */}
+  
+
+    {/* projects section */}
+ 
+
+    {/* contact section */}
+  
 
 
 
+
+
+
+
+
+
+
+
+    </section>
   ) 
   
 }

@@ -7,7 +7,7 @@ import MobileDock from './MobileDock';
 
 export default function Header() {
   return (
-    <header className="py-8 xl:py-12 text-[var(--color-text-dark)] dark:text-[var(--color-text-light)] transition-colors duration-300">
+    <header className="py-8 xl:py-12 text-[var(--color-text-dark)] dark:text-[var(--color-text-light)] transition-colors duration-300 px-4 xl:px-0">
       <div className="container mx-auto flex justify-between items-center">
         {/* logo */}
         <Link href="/">
