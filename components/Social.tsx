@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { FaGithub, FaTwitter, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 
 const socials = [
@@ -10,8 +11,8 @@ const socials = [
     },
     {
         name: "Twitter",
-        icon: <FaTwitter />,
-        href: "https://twitter.com/sadiqramanu"
+        icon: <FaXTwitter />,
+        href: "https://x.com/wyla_Stiffla"
     },
     {
         name: "Youtube",
