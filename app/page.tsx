@@ -3,7 +3,7 @@ import { FiDownload } from "react-icons/fi"
 import Social from "@/components/Social"
 import Photo from "@/components/Photo"
 import Skills from "@/app/skills/page"
-
+import Projects from "@/app/projects/page"
 
 
 export default function Home() {
@@ -57,7 +57,7 @@ export default function Home() {
   
 
     {/* projects section */}
- 
+    <Projects />
 
     {/* contact section */}
   
