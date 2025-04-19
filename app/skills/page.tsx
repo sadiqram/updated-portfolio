@@ -29,7 +29,7 @@ export default function Skills() {
   // Frameworks array (libraries and frameworks)
   const frameworks = [
     { name: "React", iconSvg: "react-svgrepo-com.svg" },
-    { name: "Next.js", iconSvg: "next-dot-js-svgrepo-com.svg" },
+    // { name: "Next.js", iconSvg: "next-dot-js-svgrepo-com.svg" },
     { name: "Tailwind CSS", iconSvg: "tailwind-svgrepo-com.svg" },
   ];
 
