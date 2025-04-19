@@ -46,7 +46,7 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.name}
-              className="bg-card rounded-2xl overflow-hidden shadow-lg transition transform hover:scale-105"
+              className="bg-card rounded-2xl overflow-hidden shadow-lg transition transform hover:scale-105 flex flex-col items-center text-center"
             >
               {/* Project image */}
               <img
@@ -56,7 +56,7 @@ export default function Projects() {
               />
 
               {/* Project details */}
-              <div className="p-6">
+              <div className="p-6 flex flex-col items-center">
                 <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
                 <p className="text-sm mb-4">{project.description}</p>
                 <div className="flex gap-4">
