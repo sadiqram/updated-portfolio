@@ -1,50 +1,50 @@
 "use client"
-import { useEffect, useRef, ReactNode } from "react";
+import { ReactNode, useRef, useEffect } from "react";
 import gsap from "gsap";
 import Magnetic from "@/app/Magnetic/page";
 
-export default function Button({ children, backgroundColor="#ff004f", ...attributes }: { children: ReactNode, backgroundColor?: string, [key: string]: any }) {
-    
-    const circle = useRef(null)
-    const timeline = useRef<gsap.core.Timeline | null>(null)
-    let timeoutId: NodeJS.Timeout | null = null
+interface ButtonProps {
+  children: ReactNode;
+}
 
+export default function Button({ children }: ButtonProps) {
+  const timeline = useRef<gsap.core.Timeline | null>(null);
+  const buttonRef = useRef<HTMLDivElement>(null);
 
-    useEffect(() => {
-        timeline.current = gsap.timeline({paused:true}) 
-        timeline.current
-        .to(circle.current, {tpo: "-25%", width: "150%", duration:0.4, ease:"power3.in"}, "enter")
-        .to(circle.current, {tpo: "-150%", width: "125%", duration:0.25}, "exit")
-
-
-
-    }, [])
-const manageMouseEnter = () => {
-    if (timeoutId) {
-        clearTimeout(timeoutId)
-        timeoutId = null
+  useEffect(() => {
+    timeline.current = gsap.timeline({ paused: true });
+    if (timeline.current && buttonRef.current) {
+      timeline.current.to(buttonRef.current, {
+        scale: 1.1,
+        duration: 0.3,
+        ease: "power2.out",
+      });
     }
-    timeline.current?.tweenFromTo("enter", "exit")
-}
-const manageMouseLeave = () => {
-    timeoutId = setTimeout(() => {
-        timeline.current?.play()
-    }, 300)
-}
+  }, []);
 
-return (
+  const handleMouseEnter = () => {
+    if (timeline.current) {
+      timeline.current.play();
+    }
+  };
+
+  const handleMouseLeave = () => {
+    if (timeline.current) {
+      timeline.current.reverse();
+    }
+  };
+
+  return (
     <Magnetic>
-    <div className="relative rounded-full overflow-hidden" style={{overflow: "hidden"}} {...attributes}
-    onMouseEnter={manageMouseEnter} onMouseLeave={manageMouseLeave}
-    >
-    <div className="relative z-10">
-    {children}
-    </div>
-    <div ref={circle} className="absolute inset-0 pointer-events-none rounded-full bg-primary opacity-0" />
-    </div>
+      <div className="relative rounded-full overflow-hidden" style={{ overflow: "hidden" }}
+        ref={buttonRef}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+      >
+        <div className="relative z-10">
+          {children}
+        </div>
+      </div>
     </Magnetic>
-)
-
-
-
+  );
 }
