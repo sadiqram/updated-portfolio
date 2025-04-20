@@ -20,7 +20,7 @@ export default function HeaderWrapper() {
           <div className="flex items-center justify-between h-16">
             <div className="flex items-center gap-4">
               <Link href="/" className="text-xl font-bold">
-                Sadiq R.
+              Sadiq <span className="text-[var(--color-primary)]">R.</span>
               </Link>
             </div>
             <nav className="flex items-center gap-4">
