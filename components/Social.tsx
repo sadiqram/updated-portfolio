@@ -1,7 +1,8 @@
 'use client';
 
 // import Link from "next/link";
-import { FaTwitter, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaYoutube, FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 // import Button from "@/components/Button";
 
 interface SocialProps {
@@ -13,7 +14,7 @@ export default function Social({ containerStyles, iconStyles }: SocialProps) {
     const socialLinks = [
         {
             name: "Twitter",
-            icon: <FaTwitter />,
+            icon: <FaXTwitter />,
             link: "https://twitter.com/yourusername",
         },
         {
@@ -29,7 +30,12 @@ export default function Social({ containerStyles, iconStyles }: SocialProps) {
         {
             name: "LinkedIn",
             icon: <FaLinkedin />,
-            link: "https://linkedin.com/in/yourusername",
+            link: "https://linkedin.com/in/ramanu-sadiq",
+        },
+        {
+            name: "GitHub",
+            icon: <FaGithub />,
+            link: "https://github.com/sadiqram",
         },
     ];
 
@@ -41,7 +47,7 @@ export default function Social({ containerStyles, iconStyles }: SocialProps) {
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`text-primary hover:text-primary/60 transition-colors duration-300 ${iconStyles || ''}`}
+                    className={`text-color-primary hover:text-primary/60 transition-colors duration-300 ${iconStyles || ''}`}
                 >
                     {social.icon}
                 </a>
