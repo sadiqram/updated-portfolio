@@ -1,13 +1,15 @@
 'use client'
 
 import Button from "@/components/Button"
-import { FaXTwitter, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa6"
+// import { FaXTwitter, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa6"
+import Social from "@/components/Social"
+
 // TODO: Let's work together with link to email
 // TODO: Add social media icons to connect with me
 
 export default function Footer() {
     return (
-        <footer className="bg-background border-t border-border pb-20 md:pb-12">
+        <footer className="bg-background md:pb-12">
             <div className="container mx-auto px-4 xl:px-0 py-12">
                 <h2 className="mb-4 text-center text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
                     Let&apos;s Work Together
@@ -17,52 +19,24 @@ export default function Footer() {
                 </span>
 
                 <div className="grid md:grid-cols-2 gap-12 items-start mb-12">
-                    {/* Left Column - Work Together */}
-                    <div className="bg-card rounded-2xl p-8 shadow-lg">
+                <div className="flex flex-col items-center">
                         <p className="mb-6 text-primary">Let&apos;s work together</p>
                         <Button>
                             <a
                                 href="mailto:your.email@example.com"
                                 className="inline-flex items-center justify-center border border-primary rounded-full px-4 py-2 text-sm hover:bg-primary hover:text-white transition-colors duration-300"
                             >
-                                Send me an email
+                                sadiq.ramanu@gmail.com
                             </a>
                         </Button>
                     </div>
 
-                    {/* Right Column - Social Links */}
-                    <div className="bg-card rounded-2xl p-8 shadow-lg flex flex-col items-center">
-                        <h3 className="text-2xl font-semibold mb-6 text-primary">Connect with me on</h3>
-                        <div className="flex gap-8 items-center justify-center">
-                            <Button>
-                                <a href="https://twitter.com/your_handle" target="_blank" rel="noopener noreferrer" 
-                                   className="inline-flex items-center justify-center text-white border border-primary rounded-full p-3 hover:bg-primary hover:text-white transition-colors duration-300">
-                                    <FaXTwitter className="w-6 h-6" />
-                                </a>
-                            </Button>
-                            <Button>
-                                <a href="https://instagram.com/your_handle" target="_blank" rel="noopener noreferrer" 
-                                   className="inline-flex items-center justify-center text-white border border-primary rounded-full p-3 hover:bg-primary hover:text-white transition-colors duration-300">
-                                    <FaInstagram className="w-6 h-6" />
-                                </a>
-                            </Button>
-                            <Button>
-                                <a href="https://youtube.com/@your_channel" target="_blank" rel="noopener noreferrer" 
-                                   className="inline-flex items-center justify-center text-white border border-primary rounded-full p-3 hover:bg-primary hover:text-white transition-colors duration-300">
-                                    <FaYoutube className="w-6 h-6" />
-                                </a>
-                            </Button>
-                            <Button>
-                                <a href="https://linkedin.com/in/your_profile" target="_blank" rel="noopener noreferrer" 
-                                   className="inline-flex items-center justify-center text-white border border-primary rounded-full p-3 hover:bg-primary hover:text-white transition-colors duration-300">
-                                    <FaLinkedin className="w-6 h-6" />
-                                </a>
-                            </Button>
-                        </div>
+                    <div className="flex flex-col items-center">
+                        <h2 className="mb-6 text-primary">Connect with me on</h2>
+                        <Social containerStyles="flex gap-6" iconStyles="w-9 h-9 border border-primary rounded-full flex items-center justify-center hover:bg-primary hover:text-white hover:transition-all duration-500"/>
                     </div>
                 </div>
 
-                {/* Footer Bottom */}
                 <div className="border-t border-border pt-8">
                     <div className="flex justify-center items-center">
                         <p className="text-sm text-muted-foreground">
