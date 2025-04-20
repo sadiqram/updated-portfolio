@@ -1,3 +1,5 @@
+'use client';
+
 // import Link from "next/link";
 import { FaTwitter, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
 import Button from "@/components/Button";

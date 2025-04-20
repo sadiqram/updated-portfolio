@@ -42,11 +42,6 @@ export default function Projects() {
     
   };
 
-  const darkModeSkills: Record<SkillKey, string> = {
-    ...skills,
-    "Next.js": "next-dot-js-svgrepo-com-white.svg",
-  };
-
   const projects: Project[] = [
     {
       name: "Youtube Clone",

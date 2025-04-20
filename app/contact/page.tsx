@@ -19,7 +19,7 @@ export default function Contact() {
                 <div className="grid md:grid-cols-2 gap-12 items-start">
                     {/* Left Column - Work Together */}
                     <div className="bg-card rounded-2xl p-8 shadow-lg">
-                        <p className="  mb-6 text-primary">Let's work together</p>
+                        <p className="mb-6 text-primary">Let&apos;s work together</p>
                         <Button>
                             <a
                                 href="mailto:your.email@example.com"

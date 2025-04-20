@@ -5,7 +5,6 @@ import Photo from "@/components/Photo"
 import Skills from "@/app/skills/page"
 import Projects from "@/app/projects/page"
 import Experience from "@/app/Experience/page"
-import Contact from "@/app/contact/page"
 import Footer from "@/components/Footer"
 
 
