@@ -103,9 +103,11 @@ export default function Projects() {
                 <div className="flex flex-wrap gap-2 justify-center">
                   {project.stack.map((skill: SkillKey) => (
                     <div key={skill} className="w-8 h-8 flex items-center justify-center">
-                      <img
+                      <Image
                         src={`/img/${skills[skill]}`}
                         alt={skill}
+                        width={24}
+                        height={24}
                         className={`w-6 h-6 object-contain ${skill === "Next.js" ? "dark:[filter:invert(1)]" : ""}`}
                       />
                     </div>
