@@ -2,7 +2,7 @@
 
 // import Link from "next/link";
 import { FaTwitter, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa";
-import Button from "@/components/Button";
+// import Button from "@/components/Button";
 
 interface SocialProps {
     containerStyles: string;
@@ -41,7 +41,7 @@ export default function Social({ containerStyles, iconStyles }: SocialProps) {
                     href={social.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/60 transition-colors duration-300"
+                    className={`text-primary hover:text-primary/60 transition-colors duration-300 ${iconStyles || ''}`}
                 >
                     {social.icon}
                 </a>

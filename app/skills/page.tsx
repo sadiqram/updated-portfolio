@@ -1,6 +1,7 @@
 import { RiBracesLine, RiCpuLine, } from "react-icons/ri";
 import { FaSitemap } from 'react-icons/fa';
 import Magnetic from "@/app/Magnetic/page"
+import Image from "next/image";
 
 
 export default function Skills() {
@@ -59,9 +60,11 @@ export default function Skills() {
                 >
                   <Magnetic>
                     <div className="w-12 h-12 flex items-center justify-center mb-2">
-                      <img
+                      <Image
                         src={`/img/${skill.iconSvg}`}
                         alt={skill.name}
+                        width={40}
+                        height={40}
                         className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
                       />
                     </div>
@@ -88,9 +91,11 @@ export default function Skills() {
                  
                   <Magnetic>
                     <div className="w-12 h-12 flex items-center justify-center mb-2">
-                      <img
+                      <Image
                         src={`/img/${skill.iconSvg}`}
                         alt={skill.name}
+                        width={40}
+                        height={40}
                         className="w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300"
                       />
                     </div>
@@ -117,12 +122,14 @@ export default function Skills() {
                 >
                   <Magnetic>
                     <div className="w-12 h-12 flex items-center justify-center mb-2">
-                      <img
+                      <Image
                         src={`/img/${skill.iconSvg}`}
                         alt={skill.name}
+                        width={40}
+                        height={40}
                         className={`w-10 h-10 object-contain group-hover:scale-110 transition-transform duration-300 ${
-            skill.name === "Next.js" ? "dark:invert" : ""
-          }`}
+                          skill.name === "Next.js" ? "dark:invert" : ""
+                        }`}
                       />
                     </div>
                   </Magnetic>
