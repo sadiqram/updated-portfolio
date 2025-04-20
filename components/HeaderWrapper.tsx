@@ -1,13 +1,10 @@
 "use client";
 
 import { Button } from "@/components/ui/button";
-import { usePathname } from "next/navigation";
 import Link from "next/link";
 import MobileDock from './MobileDock';
 
 export default function HeaderWrapper() {
-  const pathname = usePathname();
-
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
