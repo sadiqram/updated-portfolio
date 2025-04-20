@@ -24,9 +24,9 @@ export default function Experience() {
               <div className="relative pl-8">
                 <div className="absolute left-0 top-0 w-4 h-4 bg-primary rounded-full"></div>
                 <div className="absolute left-2 top-4 bottom-0 w-0.5 bg-primary"></div>
-                <h4 className="text-lg font-semibold">Master of Science in Computer Science</h4>
+                <h4 className="text-lg font-semibold">Bachelor of Science in Computer Science</h4>
                 <p className="text-muted-foreground">University at Buffalo</p>
-                <p className="text-sm text-muted-foreground">2020 - 2022</p>
+                <p className="text-sm text-muted-foreground">2021 - Present</p>
                 <p className="mt-2 text-muted-foreground">
                   Specialized in Machine Learning and Distributed Systems
                 </p>
