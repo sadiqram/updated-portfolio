@@ -3,6 +3,7 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import MobileDock from './MobileDock';
+import ThemeToggle from "@/components/ThemeToggle";
 
 export default function HeaderWrapper() {
   const scrollToSection = (id: string) => {
@@ -23,18 +24,23 @@ export default function HeaderWrapper() {
               </Link>
             </div>
             <nav className="flex items-center gap-4">
-              <Button variant="ghost" onClick={() => scrollToSection("skills")}>
+              <Button variant="ghost" onClick={() => scrollToSection("skills")} className="relative group ">
                 Skills
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
               </Button>
-              <Button variant="ghost" onClick={() => scrollToSection("experience")}>
+              <Button variant="ghost" onClick={() => scrollToSection("experience")} className="relative group ">
                 Experience
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
               </Button>
-              <Button variant="ghost" onClick={() => scrollToSection("projects")}>
+              <Button variant="ghost" onClick={() => scrollToSection("projects")} className="relative group ">
                 Projects
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
               </Button>
-              <Button variant="ghost" onClick={() => scrollToSection("contact")}>
+              <Button variant="ghost" onClick={() => scrollToSection("contact")} className="relative group ">
                 Contact
+                <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full group-hover:left-0"></span>
               </Button>
+              <ThemeToggle />
             </nav>
           </div>
         </div>
