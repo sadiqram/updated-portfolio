@@ -52,24 +52,24 @@ export default function Projects() {
   ];
 
   return (
-    <section className="min-h-screen py-12 bg-gradient-to-b from-background to-muted/20">
+    <section className="min-h-[50vh] py-6 bg-gradient-to-b from-background to-muted/20">
       <div className="container mx-auto px-4 xl:px-0">
-        <h2 className="mb-4 text-center text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
+        <h2 className="mb-2 text-center text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
           Projects
         </h2>
-        <span className="block mb-12 text-center text-muted-foreground">
+        <span className="block mb-6 text-center text-muted-foreground">
           <i>My recent works</i>
         </span>
 
         {/* Responsive grid for project cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {projects.map((project) => (
             <div
               key={project.name}
               className="bg-card rounded-2xl overflow-hidden shadow-lg transition transform flex flex-col items-center text-center"
             >
               {/* Project image */}
-              <div className="w-full h-64 overflow-hidden">
+              <div className="w-full h-48 overflow-hidden">
                 <Image
                   src={project.image}
                   alt={project.name}
@@ -80,8 +80,8 @@ export default function Projects() {
               </div>
 
               {/* Project details */}
-              <div className="p-6 flex flex-col items-center">
-                <h3 className="text-xl font-semibold mb-4 text-primary">{project.name}</h3>
+              <div className="p-4 flex flex-col items-center">
+                <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
                 <div className="flex flex-wrap gap-2 justify-center">
                   {project.stack.map((skill: SkillKey) => (
                     <div key={skill} className="w-8 h-8 flex items-center justify-center">
@@ -95,7 +95,7 @@ export default function Projects() {
                     </div>
                   ))}
                 </div>
-                <div className="flex gap-4 mt-4">
+                <div className="flex gap-4 mt-2">
                   <Button>
                     <a
                       href={project.link}
@@ -112,10 +112,9 @@ export default function Projects() {
                       href={project.source}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center p-2 text-color-primary hover:text-color-primary/60 transition-colors duration-300"
+                      className="flex items-center justify-center p-2 text-primary hover:text-primary/60 transition-colors duration-300"
                     >
-                      <FaGithub className=" text-xl" />
-                      {/* <i className="ri-github-line text-xl"></i> */}
+                      <FaGithub className="text-xl" />
                     </a>
                   </Button>
                 </div>
