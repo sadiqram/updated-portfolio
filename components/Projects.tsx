@@ -81,7 +81,7 @@ export default function Projects() {
 
               {/* Project details */}
               <div className="p-6 flex flex-col items-center">
-                <h3 className="text-xl font-semibold mb-4">{project.name}</h3>
+                <h3 className="text-xl font-semibold mb-4 text-primary">{project.name}</h3>
                 <div className="flex flex-wrap gap-2 justify-center">
                   {project.stack.map((skill: SkillKey) => (
                     <div key={skill} className="w-8 h-8 flex items-center justify-center">
@@ -112,9 +112,10 @@ export default function Projects() {
                       href={project.source}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center p-2 text-primary hover:text-primary/60 transition-colors duration-300"
+                      className="flex items-center justify-center p-2 text-color-primary hover:text-color-primary/60 transition-colors duration-300"
                     >
-                      <FaGithub className="text-xl" />
+                      <FaGithub className=" text-xl" />
+                      {/* <i className="ri-github-line text-xl"></i> */}
                     </a>
                   </Button>
                 </div>
