@@ -20,7 +20,6 @@ export default function Home() {
               Hi,I&apos;m
               {/* <span className="text-primary"> Sadiq</span>{" "} */}
               <h1 className="text-4xl font-bold">
-            
               <Typewriter
                 words={["Sadiq","a Software Engineer", "a Frontend Developer", "a Back-End Developer"]}
                 className="text-primary"
