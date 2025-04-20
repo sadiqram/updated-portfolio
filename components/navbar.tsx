@@ -3,7 +3,8 @@
 import ThemeToggle from "./ThemeToggle";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Magnetic from "@/app/Magnetic/page"
+import Magnetic from "./Magnetic";
+
 const links = [
   {
     name: "Home",
