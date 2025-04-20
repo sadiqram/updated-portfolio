@@ -10,7 +10,7 @@ export default function Contact() {
         <section className="min-h-screen py-12 bg-gradient-to-b from-background to-muted/20">
             <div className="container mx-auto px-4 xl:px-0">
                 <h2 className="mb-4 text-center text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60">
-                    Contact
+                    Let&apos;s Work Together
                 </h2>
                 <span className="block mb-12 text-center text-muted-foreground">
                     <i>Get in touch</i>
