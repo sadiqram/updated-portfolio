@@ -1,27 +1,38 @@
-'use client';
+"use client";
 
-import { ReactNode, useRef, useEffect } from 'react';
-import gsap from 'gsap';
+import React, { useEffect, useRef, ReactNode } from 'react';
+import { gsap } from 'gsap';
 
 interface MagneticProps {
   children: ReactNode;
 }
 
-export default function Magnetic({ children }: MagneticProps) {
+const Magnetic: React.FC<MagneticProps> = ({ children }) => {
   const magnetic = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!magnetic.current) return;
 
     const element = magnetic.current;
-    const xTo = gsap.quickTo(element, "x", { duration: 1, ease: "elastic.out(1, 0.3)" });
-    const yTo = gsap.quickTo(element, "y", { duration: 1, ease: "elastic.out(1, 0.3)" });
+    let xTo: gsap.QuickToFunc;
+    let yTo: gsap.QuickToFunc;
 
-    const handleMouseMove = (e: MouseEvent) => {
-      const { clientX, clientY } = e;
+    try {
+      xTo = gsap.quickTo(element, "x", { duration: 1, ease: "elastic.out(1, 0.3)" });
+      yTo = gsap.quickTo(element, "y", { duration: 1, ease: "elastic.out(1, 0.3)" });
+    } catch (error) {
+      console.error("GSAP initialization error:", error);
+      return;
+    }
+
+    const handleMouseMove = (event: MouseEvent) => {
+      if (!element) return;
+      
+      const { clientX, clientY } = event;
       const { height, width, left, top } = element.getBoundingClientRect();
       const x = clientX - (left + width / 2);
       const y = clientY - (top + height / 2);
+      
       xTo(x * 0.35);
       yTo(y * 0.35);
     };
@@ -45,4 +56,6 @@ export default function Magnetic({ children }: MagneticProps) {
       {children}
     </div>
   );
-} 
+};
+
+export default Magnetic; 

@@ -1,6 +1,6 @@
 import { RiBracesLine, RiCpuLine, } from "react-icons/ri";
 import { FaSitemap } from 'react-icons/fa';
-import Magnetic from "@/app/Magnetic/page"
+import Magnetic from "@/components/Magnetic"
 import Image from "next/image";
 
 

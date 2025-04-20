@@ -1,7 +1,7 @@
 "use client"
 import { ReactNode, useRef, useEffect } from "react";
 import gsap from "gsap";
-import Magnetic from "@/app/Magnetic/page";
+import Magnetic from "@/components/Magnetic";
 
 interface ButtonProps {
   children: ReactNode;
