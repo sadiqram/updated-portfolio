@@ -9,9 +9,9 @@ import Footer from "@/components/Footer"
 
 export default function Home() {
   return(
-    <section className="h-full space-y-4 md:space-y-6 pt-16 md:pt-20">
+    <section className="h-full space-y-0 md:space-y-1 pt-20 md:pt-24">
       <div className="container mx-auto px-4 xl:px-0">
-        <div className="flex flex-col items-center justify-center xl:flex-row xl:items-start xl:justify-between xl:gap-12 xl:pt-8 xl:pb-12">
+        <div className="flex flex-col items-center justify-center xl:flex-row xl:items-start xl:justify-between xl:gap-4 xl:pt-2 xl:pb-2">
           <div className="text-center xl:text-left order-2 xl:order-none xl:flex-1">
             <span className="text-xl block mb-2">Software Engineer</span>
             <h1 className="h1 mb-4"> Hi,I&apos;m <br /><span className="text-[#ff004f]">Sadiq</span>  </h1>
@@ -33,15 +33,31 @@ export default function Home() {
             <Photo />
           </div>
         </div>
+
+        <div className="border-t border-border pt-4">
+          <div id="skills">
+            <Skills />
+          </div>
+        </div>
+
+        <div className="border-t border-border pt-4">
+          <div id="experience">
+            <Experience />
+          </div>
+        </div>
+
+        <div className="border-t border-border pt-4">
+          <div id="projects">
+            <Projects />
+          </div>
+        </div>
+
+        <div className="border-t border-border pt-4">
+          <div id="contact">
+            <Footer />
+          </div>
+        </div>
       </div>
-      {/* skills section */}
-      <Skills />
-      {/* Experience and Qualifications section */}
-      <Experience />
-      {/* projects section */}
-      <Projects />
-      {/* contact section and Footer*/}
-      <Footer />
     </section>
   ) 
 }
