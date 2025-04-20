@@ -1,34 +1,77 @@
 import { FaGithub } from "react-icons/fa";
-
+import "remixicon/fonts/remixicon.css";
 import Button from "@/components/Button"
+import Image from "next/image"
 
+type SkillKey = "HTML" | "Python" | "Go" | "JavaScript" | "TypeScript" | "SQL" | "PHP" | 
+                "Docker" | "Git" | "Linux" | "Google Cloud" | "AWS" | "Maven" | "Nginx" | 
+                "Firebase" | "React" | "Tailwind CSS" | "Next.js";
+
+interface Project {
+  name: string;
+  description: string;
+  image: string;
+  link: string;
+  source: string;
+  stack: SkillKey[];
+}
 
 export default function Projects() {
-  const projects = [
+
+  
+  const skills: Record<SkillKey, string> = {
+    "HTML": "html-svgrepo-com.svg" ,
+    "Python": "python-svgrepo-com.svg" ,
+    "Go": "go-svgrepo-com.svg" ,
+    "JavaScript": "js-svgrepo-com.svg" ,
+    "TypeScript": "typescript-logo-svgrepo-com.svg" ,
+    "SQL": "sql-svgrepo-com.svg" ,
+    "PHP": "php-svgrepo-com.svg" ,
+    "Docker": "docker-svgrepo-com.svg" ,
+    "Git": "git-svgrepo-com.svg" ,
+    "Linux": "linux-svgrepo-com.svg" ,
+    "Google Cloud": "gcp-svgrepo-com.svg" ,
+    "AWS": "aws-svgrepo-com.svg" ,
+    "Maven": "maven-svgrepo-com.svg" ,
+    "Nginx": "nginx-svgrepo-com.svg" ,
+    "Firebase": "firebase-svgrepo-com.svg" ,
+    "React": "react-svgrepo-com.svg" ,
+    "Tailwind CSS": "tailwind-svgrepo-com.svg" ,
+    "Next.js": "next-dot-js-svgrepo-com.svg" ,
+  
+    
+  };
+
+  const darkModeSkills: Record<SkillKey, string> = {
+    ...skills,
+    "Next.js": "next-dot-js-svgrepo-com-white.svg",
+  };
+
+  const projects: Project[] = [
     {
-      name: "Project 1",
-      description: "Description of Project 1",
-      image: "/images/project1.jpg",
-      link: "https://example.com/project1",
-      source: "https://github.com/example/project1",
-      stack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+      name: "Youtube Clone",
+      description: "A full-stack video streaming platform built with modern web technologies and cloud services. This project demonstrates a microservices architecture for video processing, storage, and delivery.",
+      image: "/img/yt_clone.png",
+      link: "https://yt-web-client-676928624913.us-central1.run.app/",
+      source: "https://github.com/sadiqram/yt-clone-app",
+      stack: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Firebase", "Google Cloud", "Docker"],
     },
-    {
-      name: "Project 2",
-      description: "Description of Project 2",
-      image: "/images/project2.jpg",
-      link: "https://example.com/project2",
-      source: "https://github.com/example/project2",
-      stack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-    },
-    {
-      name: "Project 3",
-      description: "Description of Project 3",
-      image: "/images/project3.jpg",
-      link: "https://example.com/project3",
-      source: "https://github.com/example/project3",
-      stack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
-    },
+    // {
+    //   name: "Project 2",
+    //   description: "Description of Project 2",
+    //   image: "/images/project2.jpg",
+    //   link: "https://example.com/project2",
+    //   source: "https://github.com/example/project2",
+    //   stack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+    // },
+    // {
+    //   name: "Project 3",
+    //   description: "Description of Project 3",
+    //   image: "/images/project3.jpg",
+    //   link: "https://example.com/project3",
+    //   source: "https://github.com/example/project3",
+    //   stack: ["React", "Next.js", "Tailwind CSS", "TypeScript"],
+    // },
   ];
 
   return (
@@ -46,28 +89,43 @@ export default function Projects() {
           {projects.map((project) => (
             <div
               key={project.name}
-              className="bg-card rounded-2xl overflow-hidden shadow-lg transition transform hover:scale-105 flex flex-col items-center text-center"
+              className="bg-card rounded-2xl overflow-hidden shadow-lg transition transform flex flex-col items-center text-center"
             >
               {/* Project image */}
-              <img
-                src={project.image}
-                alt={project.name}
-                className="w-full h-56 object-cover"
-              />
+              <div className="w-full h-64 overflow-hidden">
+                <Image
+                  src={project.image}
+                  alt={project.name}
+                  width={500}
+                  height={300}
+                  className="w-full h-full object-contain"
+                />
+              </div>
 
               {/* Project details */}
               <div className="p-6 flex flex-col items-center">
-                <h3 className="text-xl font-semibold mb-2">{project.name}</h3>
-                <p className="text-sm mb-4">{project.description}</p>
-                <div className="flex gap-4">
+                <h3 className="text-xl font-semibold mb-4">{project.name}</h3>
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {project.stack.map((skill: SkillKey) => (
+                    <div key={skill} className="w-8 h-8 flex items-center justify-center">
+                      <img
+                        src={`/img/${skills[skill]}`}
+                        alt={skill}
+                        className={`w-6 h-6 object-contain ${skill === "Next.js" ? "dark:[filter:invert(1)]" : ""}`}
+                      />
+                    </div>
+                  ))}
+                </div>
+                <div className="flex gap-4 mt-4">
                   <Button>
                     <a
                       href={project.link}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-block text-primary border border-primary rounded px-4 py-2 text-sm hover:bg-primary hover:text-white transition-colors duration-300"
+                      className="inline-block text-primary px-4 py-2 text-sm "
                     >
                       View Project
+                      <i className="ri-arrow-right-line"></i>
                     </a>
                   </Button>
                   <Button>
@@ -75,7 +133,7 @@ export default function Projects() {
                       href={project.source}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center justify-center p-2 border border-primary rounded hover:bg-primary hover:text-white transition-colors duration-300"
+                      className="flex items-center justify-center p-2 text-primary hover:text-primary/60 transition-colors duration-300"
                     >
                       <FaGithub className="text-xl" />
                     </a>
