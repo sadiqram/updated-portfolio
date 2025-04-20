@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="min-h-screen" suppressHydrationWarning>
+    <html lang="en" className="min-h-screen scroll-smooth" suppressHydrationWarning>
       <body className={`${jetBrainsMono.variable} min-h-screen bg-[inherit] text-[inherit] transition-colors duration-300`}>
         <ThemeProvider>
           <HeaderWrapper />
