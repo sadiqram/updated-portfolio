@@ -20,7 +20,7 @@ export default function Footer() {
 
                 <div className="grid md:grid-cols-2 gap-12 items-start mb-12">
                 <div className="flex flex-col items-center">
-                        <p className="mb-6 text-primary">Let&apos;s work together</p>
+                        <p className="mb-6 text-primary">Email</p>
                         <Button>
                             <a
                                 href="mailto:your.email@example.com"
