@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import HeaderWrapper from "@/components/HeaderWrapper";
-
+import { ThemeProvider } from "@/components/ThemeProvider";
 
 const jetBrainsMono = JetBrains_Mono({ subsets: ["latin"] , weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   variable: "--font-jetBrainsMono",
@@ -19,11 +19,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    
-    <html lang="en" className="min-h-screen">
+    <html lang="en" className="min-h-screen" suppressHydrationWarning>
       <body className={`${jetBrainsMono.variable} min-h-screen bg-[inherit] text-[inherit] transition-colors duration-300`}>
-      <HeaderWrapper />
-          {children} 
+        <ThemeProvider>
+          <HeaderWrapper />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
