@@ -16,15 +16,17 @@ export default function Home() {
             
             {/* <span className="text-xl block mb-2">Software Engineer</span> */}
             <h1 className="text-4xl font-bold mb-4">
-             
-              Hi,I&apos;m
-              {/* <span className="text-primary"> Sadiq</span>{" "} */}
-              <h1 className="text-4xl font-bold">
-              <Typewriter
+              Hi,I&apos;m{" "}
+              {/* <Typewriter
+                words={["Sadiq","a Software Engineer", "a Frontend Developer", "a Back-End Developer"]}
+                className="text-primary"
+              /> */}
+            </h1>
+            <h1 className="text-4xl font-bold mb-4">
+            <Typewriter
                 words={["Sadiq","a Software Engineer", "a Frontend Developer", "a Back-End Developer"]}
                 className="text-primary"
               />
-            </h1>
             </h1>
             <p className="max-w-[500px] mb-8 text-[var(--color-text-muted)] transition-colors duration-300">
               I&apos;m a software engineer with a passion for building scalable
