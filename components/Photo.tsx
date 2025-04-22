@@ -17,8 +17,8 @@ export default function Photo() {
                 duration: 0.4,
                 ease: "easeInOut"
             }}}>
-                <div className='w-[298px] h-[298px] xl:w-[498px] xl:h-[498px] absolute overflow-hidden rounded-full'>
-                    <Image src="/img/sadiq_evil.png" alt="Photo" priority quality = {100} fill className='object-cover' />
+                <div className='w-[290px] h-[290px] xl:w-[490px] xl:h-[490px] absolute overflow-hidden rounded-full'>
+                    <Image src="/img/close_up_img_sadiq_no_bg2.png" alt="Photo" priority quality = {100} fill className='object-cover' />
                 </div>
             </motion.div>
 
