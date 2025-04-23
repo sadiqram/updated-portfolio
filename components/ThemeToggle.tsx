@@ -2,34 +2,36 @@
 
 import { useEffect, useState } from 'react';
 import { BsMoon, BsSun } from 'react-icons/bs';
+import { useTheme } from 'next-themes';
 
 export default function ThemeToggle() {
-  const [isDark, setIsDark] = useState(false);
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
+  // Ensure we only render after mounting to avoid hydration mismatch
   useEffect(() => {
-    const stored = localStorage.getItem('theme');
-    const prefersDark =
-      stored === 'dark' ||
-      (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches);
-
-    setIsDark(prefersDark);
-    document.documentElement.classList.toggle('light', !prefersDark);
+    setMounted(true);
   }, []);
 
   const toggleTheme = () => {
-    const newMode = !isDark;
-    setIsDark(newMode);
-    localStorage.setItem('theme', newMode ? 'dark' : 'light');
-    document.documentElement.classList.toggle('light', !newMode);
+    setTheme(resolvedTheme === 'dark' ? 'light' : 'dark');
   };
+
+  if (!mounted) {
+    return null;
+  }
 
   return (
     <button
       onClick={toggleTheme}
-      className="text-xl p-2 rounded-full transition  hover:text-white"
+      className="text-xl p-2 rounded-full transition hover:text-white"
       aria-label="Toggle Theme"
     >
-      {isDark ? <BsSun className="text-gray-300 transition-all duration-300 transform hover:scale-110 " /> : <BsMoon className="text-black transition-all duration-300 transform hover:scale-110" />}
+      {resolvedTheme === 'dark' ? (
+        <BsSun className="text-gray-300 transition-all duration-300 transform hover:scale-110" />
+      ) : (
+        <BsMoon className="text-black transition-all duration-300 transform hover:scale-110" />
+      )}
     </button>
   );
 }
