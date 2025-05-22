@@ -27,9 +27,7 @@ export default function Experience() {
                 <h4 className="text-lg font-semibold">Bachelor of Science in Computer Science</h4>
                 <p className="text-muted-foreground">University at Buffalo</p>
                 <p className="text-sm text-muted-foreground">2021 - Present</p>
-                <p className="mt-2 text-muted-foreground">
-                  Specialized in Machine Learning and Distributed Systems
-                </p>
+                
               </div>
             </div>
           </div>
@@ -40,7 +38,7 @@ export default function Experience() {
               <FaBriefcase className="mr-2" />
               Work Experience
             </h3>
-            <div className="space-y-6">
+            {/* <div className="space-y-6">
               <div className="relative pl-8">
                 <div className="absolute left-0 top-0 w-4 h-4 bg-primary rounded-full"></div>
                 <div className="absolute left-2 top-4 bottom-0 w-0.5 bg-primary"></div>
@@ -51,7 +49,8 @@ export default function Experience() {
                   Working on cloud infrastructure and distributed systems
                 </p>
               </div>
-            </div>
+            </div> */}
+            No relevant experience yet.
           </div>
         </div>
       </div>
