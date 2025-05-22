@@ -15,7 +15,7 @@ export default function Social({ containerStyles, iconStyles }: SocialProps) {
         {
             name: "Twitter",
             icon: <FaXTwitter />,
-            link: "https://twitter.com/yourusername",
+            link: "https://x.com/SadiqRamanu",
         },
         {
             name: "Instagram",
