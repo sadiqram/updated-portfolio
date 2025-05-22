@@ -5,7 +5,7 @@ import { BsMoon, BsSun } from 'react-icons/bs';
 import { useTheme } from 'next-themes';
 
 export default function ThemeToggle() {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const {  setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   // Ensure we only render after mounting to avoid hydration mismatch
@@ -18,7 +18,7 @@ export default function ThemeToggle() {
   };
 
   if (!mounted) {
-    return null;
+
   }
 
   return (
