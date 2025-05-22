@@ -29,11 +29,8 @@ export default function Home() {
               />
             </h1>
             <p className="max-w-[500px] mb-8 text-[var(--color-text-muted)] transition-colors duration-300">
-              I&apos;m a software engineer with a passion for building scalable
-              and efficient systems. I&apos;m currently NOT working as a
-              software engineer at{" "}
-              <span className="text-color-primary">Google</span> and{" "}
-              <span className="text-color-primary">Facebook</span>.
+              I&apos;m a Computer Science student with a passion for building scalable
+              and efficient systems. I specialize in both Frontend Development and Backend Development. I enjoy solving complex problems and creating efficient solutions. I am currently enhancing my skills in distributed systems, mainly through personal projects.
             </p>
             {/* social media icons */}
             <div className="flex flex-col items-center gap-6">
