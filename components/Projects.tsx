@@ -7,7 +7,7 @@ import Image from "next/image"
 
 type SkillKey = "HTML" | "Python" | "Go" | "JavaScript" | "TypeScript" | "SQL" | "PHP" | 
                 "Docker" | "Git" | "Linux" | "Google Cloud" | "AWS" | "Maven" | "Nginx" | 
-                "Firebase" | "React" | "Tailwind CSS" | "Next.js";
+                "Firebase" | "React" | "Tailwind CSS" | "Next.js" | "MongoDB" | "WebtRTC" ;
 
 interface Project {
   name: string;
@@ -38,6 +38,8 @@ export default function Projects() {
     "React": "react-svgrepo-com.svg" ,
     "Tailwind CSS": "tailwind-svgrepo-com.svg" ,
     "Next.js": "next-dot-js-svgrepo-com.svg" ,
+    "MongoDB": "MongoDB.svg",
+    "WebtRTC": "webrtc-svgrepo-com.svg"
   };
 
   const projects: Project[] = [
@@ -47,8 +49,25 @@ export default function Projects() {
       image: "/img/yt_clone.png",
       link: "https://yt-web-client-676928624913.us-central1.run.app/",
       source: "https://github.com/sadiqram/yt-clone-app",
-      stack: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Firebase", "Google Cloud", "Docker"],
+      stack: ["Next.js", "Tailwind CSS", "TypeScript", "Firebase", "Google Cloud", "Docker"],
+    }, {
+      name: "Lock In",
+      description: "A full-stack web application that allows users to share their fitness journey with others and other features.",
+      // TODO: Add image
+      image: "/img/lock_in.png",
+      link: "https://github.com/wesleycym/Null-Pointers",
+      source: "https://github.com/wesleycym/Null-Pointers",
+      stack: ["Docker", "Nginx", "MongoDB", "WebtRTC"] 
     },
+    {
+      name: "Penguin Polls",
+      description: "A full-stack web application that allows users to share their fitness journey with others and other features.",
+      // TODO: Add image
+      image: "/img/lock_in.png",
+      link: "https://github.com/wesleycym/Null-Pointers",
+      source: "https://github.com/wesleycym/Null-Pointers",
+      stack: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Firebase", "Google Cloud", "Docker"],
+    }
   ];
 
   return (
@@ -63,7 +82,7 @@ export default function Projects() {
 
         {/* Responsive grid for project cards */}
         {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"> */}
-          <div className ="flex flex-col items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-6">
           {projects.map((project) => (
             <div
               key={project.name}
