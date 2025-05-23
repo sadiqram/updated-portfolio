@@ -18,7 +18,14 @@ export default function ThemeToggle() {
   };
 
   if (!mounted) {
-
+    return (
+      <button
+        className="text-xl p-2 rounded-full transition-all duration-300 hover:bg-accent opacity-0"
+        aria-label="Theme toggle placeholder"
+      >
+        <BsSun className="text-[var(--color-text)] transition-all duration-300 transform hover:scale-110" />
+      </button>
+    );
   }
 
   return (
