@@ -54,18 +54,18 @@ export default function Projects() {
       name: "Lock In",
       description: "A full-stack web application that allows users to share their fitness journey with others and other features.",
       // TODO: Add image
-      image: "/img/lock_in.png",
+      image: "/img/lockin_gen_image.png",
       link: "https://github.com/wesleycym/Null-Pointers",
       source: "https://github.com/wesleycym/Null-Pointers",
-      stack: ["Docker", "Nginx", "MongoDB", "WebtRTC"] 
+      stack: ["Docker","Python", "Nginx", "MongoDB", "WebtRTC"] 
     },
     {
       name: "Penguin Polls",
       description: "A full-stack web application that allows users to share their fitness journey with others and other features.",
       // TODO: Add image
-      image: "/img/lock_in.png",
-      link: "https://github.com/wesleycym/Null-Pointers",
-      source: "https://github.com/wesleycym/Null-Pointers",
+      image: "/img/pemguin_polls_gen.png",
+      link: "https://github.com/sadiqram/u24-polling-and-feedback-poll_penguins",
+      source: "https://github.com/sadiqram/u24-polling-and-feedback-poll_penguins",
       stack: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Firebase", "Google Cloud", "Docker"],
     }
   ];
