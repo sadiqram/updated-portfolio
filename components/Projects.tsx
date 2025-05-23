@@ -63,7 +63,7 @@ export default function Projects() {
       name: "Penguin Polls",
       description: "A full-stack web application that allows users to share their fitness journey with others and other features.",
       // TODO: Add image
-      image: "/img/pemguin_polls_gen.png",
+      image: "/img/penguin_polls_gen.png",
       link: "https://github.com/sadiqram/u24-polling-and-feedback-poll_penguins",
       source: "https://github.com/sadiqram/u24-polling-and-feedback-poll_penguins",
       stack: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Firebase", "Google Cloud", "Docker"],
