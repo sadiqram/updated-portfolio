@@ -10,6 +10,7 @@ import {
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { CiMenuFries } from "react-icons/ci";
+import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
 const links = [
@@ -37,12 +38,22 @@ const links = [
 
 export default function MobileNav() {
     const pathname = usePathname();
-    const [sheetBg, setSheetBg] = useState('rgba(0, 0, 0, 0.5)');
+    const { resolvedTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
   
     useEffect(() => {
-      const isLight = document.documentElement.classList.contains('light');
-      setSheetBg(isLight ? 'rgba(255, 255, 255, 0.9)' : 'rgba(0, 0, 0, 0.5)');
+      setMounted(true);
     }, []);
+  
+    if (!mounted) {
+      return (
+        <Sheet>
+          <SheetTrigger className="flex items-center justify-center">
+            <CiMenuFries className="text-[32px] text-[var(--color-text)] hover:text-[var(--color-primary)] transition-all duration-300" />
+          </SheetTrigger>
+        </Sheet>
+      );
+    }
   
     return (
       <Sheet>
@@ -51,8 +62,9 @@ export default function MobileNav() {
         </SheetTrigger>
   
         <SheetContent
-          className="flex flex-col text-[var(--color-text)] transition-colors duration-300 backdrop-blur-md"
-          style={{ backgroundColor: sheetBg }}
+          className={`flex flex-col text-[var(--color-text)] transition-colors duration-300 backdrop-blur-md ${
+            resolvedTheme === 'light' ? 'bg-white/90' : 'bg-black/50'
+          }`}
         >
           <SheetHeader>
             <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
@@ -89,4 +101,4 @@ export default function MobileNav() {
         </SheetContent>
       </Sheet>
     );
-  }
+}
